@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      header {
+        height: 285px;
+        background-image: url("./img/bg2.png");
+
+        margin-bottom: 70px;
+      }
+      header nav {
+        padding-top: 180px;
+        padding-right: 130px;
+        font-size: 20px;
+      }
+      #page3 {
+        background-color: #4d2c5e;
+        color: white;
+        border-radius: 100px;
+        font-size: larger;
+      }
+      .trackSec {
+        padding: 30px 190px;
+      }
+      .search {
+        border: 1px solid grey;
+        height: 71px;
+        width: 800px;
+      }
+      .PurbleBtn {
+        height: 60px;
+        left: 1021px;
+        top: 510px;
+      }
+
+      /* Container for the dropdowns */
+      .dropdown-container {
+        display: flex;
+        gap: 10px;
+      }
+
+      /* Styled select container */
+      .styled-select {
+        position: relative;
+        display: inline-block;
+        border: 1px solid gray;
+        border-radius: 50px;
+        overflow: hidden;
+        width: 150px; /* Adjust width as needed */
+        height: 63px;
+      }
+
+      /* Native select element */
+      .styled-select select {
+        appearance: none;
+        -webkit-appearance: none; /* For Safari */
+        -moz-appearance: none; /* For Firefox */
+        border: none;
+        outline: none;
+        padding: 0 40px 0 18px; /* Padding to create space for the arrow */
+        font-size: 20px;
+        color: #6a6a6a;
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+
+      /* Custom arrow */
+      .styled-select::after {
+        content: "▼";
+        border: 1px solid gray;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: #6a0dad;
+        pointer-events: none;
+      }
+
+      /* On focus */
+      .styled-select select:focus {
+        color: #333;
+      }
+      .searchCont {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+      #courses {
+        background-image: url("./img/emptyBg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* height: 900px; */
+        padding: 8px 370px;
+        padding-top: 50px;
+      }
+
+      .cardsCont {
+        padding: 30px 900px;
+      }
+      .orangBtn {
+        top: 360px;
+        left: 98px;
+      }
+      footer {
+        margin-top: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <header class="container">
+      <nav>
+        <span> </span>
+
+        <ul>
+          <li><a id="page1" href="./index.html">Home</a></li>
+          <li><a id="page2" href="#"> About us</a></li>
+          <li><a id="page3" href="./courses.html">Courses</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="trackSec container">
+      <span style="text-align: center">
+        <h2 class="smTitle">Discover Your Course</h2>
+        <p class="xsLightTxt">
+          Lorem Ipsum is simply dummy text of the printing.
+        </p>
+      </span>
+
+      <div class="searchCont">
+        <input type="search" class="search" placeholder="  Search for Courses.." />
+
+        <button class="continue-btn PurbleBtn">Continue</button>
+
+        <div class="dropdown-container">
+          <div class="styled-select">
+            <select>
+              <option value="CS" selected>CS</option>
+              <option value="IT">IT</option>
+              <option value="Math">Math</option>
+            </select>
+          </div>
+          <div class="styled-select">
+            <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4" selected>4</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses"></section>
+    <div class="not-found" id="not-found" style="display: none;">No courses found.</div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Logo and description -->
+        <div class="footer-section">
+          <h3 class="footer-logo"><img src="./img/logo.png" /> Qiyem</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy a type
+            specimen book.
+          </p>
+        </div>
+
+        <!-- Company Links -->
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">How to work?</a></li>
+            <li><a href="#">Popular Course</a></li>
+            <li><a href="#">Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Courses Links -->
+        <div class="footer-section">
+          <h4>Courses</h4>
+          <ul>
+            <li><a href="#">Search Courses</a></li>
+            <li><a href="#">Other University Course</a></li>
+          </ul>
+        </div>
+
+        <!-- Support Links -->
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer-bottom">
+        <p>BookStore All Right Reserved, 2025</p>
+      </div>
+    </footer>
+
+    <script src="./courses.js"></script>
+  </body>
+</html>

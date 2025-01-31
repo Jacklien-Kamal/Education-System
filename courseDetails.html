@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Details</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      h1,
+      h3 {
+        color: #ff7426;
+      }
+
+      .course-header {
+        margin-top: 20px;
+      }
+
+      .star-rating {
+        font-size: 54px;
+        margin: 0px;
+        color: #ff7426;
+        cursor: pointer;
+      }
+
+      .star-rating span {
+        padding: 0 5px;
+      }
+
+      .feedback-item {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+      }
+
+      #submitFeedback {
+        background-color: #4d2c5ed5;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .comment-section {
+        margin-top: 20px;
+      }
+
+      .submit-feedback-btn {
+        background-color: #ff7426;
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 200px;
+      }
+
+      #goBackBtn {
+        background-color: #4d2c5ed5;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      #goBackBtn:hover {
+        background-color: #ff7426;
+      }
+
+      header {
+        height: 285px;
+        background-image: url("./img/bg2.png");
+
+        margin-bottom: 70px;
+      }
+      header nav {
+        padding-top: 180px;
+        padding-right: 130px;
+        font-size: 20px;
+      }
+      #page2 {
+        background-color: #4d2c5e;
+        color: white;
+        border-radius: 100px;
+        font-size: larger;
+      }
+      .rate {
+        background: white;
+        border-radius: 20px;
+        padding: 10px 400px;
+      }
+
+      .badge {
+        display: inline-block;
+        background: #ffe8d5cb;
+        color: #f48c42;
+        padding: 20px 30px;
+        border-radius: 30px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .title {
+        font-size: 4rem;
+        margin: 10px 0;
+        color: #333;
+        padding: 10px;
+      }
+      .topRate {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .category {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 120px;
+        margin-right: 340px;
+        font-size: 2.5rem;
+      }
+
+      .category div {
+        font-size: 2.5rem;
+        padding: 10px;
+        color: #807f7f;
+      }
+      .lightTxt {
+        font-size: 27px;
+        padding-top: 19px;
+      }
+      .grade {
+        color: #217c58;
+        background-color: #21b5734a;
+        border-radius: 50%;
+        font-size: 4.5rem;
+        font-weight: bold;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+      }
+
+      .satisfaction {
+        color: #f48c42;
+        font-size: 3rem;
+        margin: 30px 400px;
+        display: flex;
+        gap: 100px;
+        align-items: center;
+      }
+
+      .recommendation {
+        margin-top: 100px;
+        background-color: #fdf8ee99;
+        padding: 50px 230px;
+      }
+      .recommendation h1 {
+        font-size: 35px;
+        padding-left: 30px;
+        padding-bottom: 15px;
+      }
+      .recCont {
+        display: flex;
+        gap: 150px;
+        justify-content: center;
+      }
+      .slideCont {
+        background-color: white;
+        width: 370px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .slideCont p {
+        padding-left: 13px;
+        font-size: 18px;
+        /* margin: 0px; */
+        background-color: white;
+      }
+      .slideCont img {
+        border: 10px solid #fdf8ee;
+        border-left: 100px solid #fdf8ee;
+        border-right: 100px solid #fdf8ee;
+        margin: 10px auto;
+      }
+      .sugCont {
+        background-color: white;
+        width: 570px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      textarea {
+        width: 90%;
+        height: 200px;
+        border: 10px solid #fdf8ee;
+        border-left: 20px solid #fdf8ee;
+        border-right: 20px solid #fdf8ee;
+        margin: 10px auto;
+      }
+      .sugCont h2 {
+        padding-left: 13px;
+      }
+      .uploadLabel {
+        display: inline-block;
+        background-color: #f48c42;
+        padding: 10px 20px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        margin: 20px 0;
+      }
+
+      input[type="file"] {
+        display: none; /* Hide the default file input */
+      }
+
+      #fileName {
+        font-size: 1.2rem;
+        color: #333;
+        margin-top: 10px;
+      }
+      .uploadLabel {
+        display: inline-block;
+        background-color: #f48c42;
+        padding: 10px 20px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        margin: 20px 0;
+      }
+
+      input[type="file"] {
+        display: none; /* Hide the default file input */
+      }
+
+      #fileNames {
+        font-size: 1.2rem;
+        color: #333;
+        margin-top: 10px;
+      }
+      .commentsCont {
+        padding: 50px 275px;
+      }
+
+      .comments {
+        border-radius: 8px;
+        padding: 15px 400px;
+      }
+
+      .comment {
+        background-color: #fdf8ee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 10px;
+      }
+
+      .comment div {
+        width: 90%;
+        height: 70px;
+        padding: 10px;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        background-color: #fff;
+        box-shadow: 3px 3px 10px #cbccd1, -8px -8px 15px #ffffff;
+
+        resize: none;
+        outline: none;
+      }
+      .icon-planet {
+        float: right;
+        margin-right: 210px;
+        margin-top: 100px;
+      }
+
+      .icon-planet img {
+        width: 80px;
+        height: 50px;
+      }
+
+      /* Popup overlay */
+      #feedback-modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #222;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 1000;
+        width: 50%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Background overlay */
+      #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+
+      /* Close button */
+      .close-btn {
+        background-color: #ff7426;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        float: right;
+      }
+      footer {
+        margin-top: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container">
+      <nav>
+        <span> </span>
+
+        <ul>
+          <li><a id="page1" href="./index.html">Home</a></li>
+          <li><a id="page2" href="#"> About us</a></li>
+          <li><a id="page3" href="./courses.html">Courses</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="course-details"></div>
+
+    <button id="goBackBtn">Go Back</button>
+
+    <script src="./courseDetails.js">
+ </script>
+  </body>
+</html>

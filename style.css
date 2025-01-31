@@ -1,0 +1,392 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  * {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 0px;
+    padding: 0px;
+  }
+  .container {
+    padding: 0px 150px;
+  }
+  header {
+    background-image: url("./img/bg1.png");
+    background-repeat: no-repeat;
+    height: 1238px;
+    position: relative;
+  }
+  nav {
+    padding-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav span {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 24px;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    font-weight: 700;
+  }
+  nav ul a {
+    text-decoration: none;
+    color: black;
+    padding: 12px 30px;
+  }
+  nav ul a:hover {
+    background-color: #4d2c5ed5;
+    color: white;
+    border-radius: 100px;
+    font-size: larger;
+  }
+
+  #bottomHead {
+    margin-top: 170px;
+    display: flex;
+    gap: 30px;
+
+    justify-content: center;
+  }
+  .title {
+    font-size: 69px;
+    font-weight: 900;
+    color: #050c26;
+    margin-bottom: 0px;
+  }
+  .smTitle {
+    font-size: 50px;
+    font-weight: 700;
+    color: #050c26;
+    margin-bottom: 0px;
+  }
+  .orangTxt {
+    color: #ff7426;
+  }
+  .lightTxt {
+    color: #8a8a8a;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 7px;
+  }
+  .xsLightTxt {
+    color: #8a8a8a;
+    font-size: 15px;
+  }
+
+  .search {
+    /* margin-top: 25px; */
+    height: 79px;
+    width: 560px;
+    border: 0px;
+    padding-left: 20px;
+    font-size: 20px;
+    border-radius: 50px;
+    position: relative;
+  }
+  .search::placeholder {
+    color: #0f335e; /* Change the placeholder text color */
+    font-size: 20px; /* Adjust the font size */
+    font-weight: 600;
+  }
+
+  .PurbleBtn {
+    position: absolute;
+    width: 158px;
+    height: 72px;
+    left: 550px;
+    top: 475px;
+    border: 0px;
+    color: white;
+    font-size: 20px;
+    background: #4d2c5e;
+    border-radius: 96px;
+  }
+  .PurbleBtn:hover {
+    background-color: #ff7426;
+    cursor: pointer;
+    font-size: 21px;
+  }
+
+  .purpleSec {
+    position: absolute;
+    bottom: -245px;
+    left: 10%;
+    right: 15%;
+    padding: 40px;
+    width: 1430px;
+    border-radius: 16px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: #4d2c5e;
+  }
+  .iconContainer {
+    background-color: #ffffff49;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    padding: 0 15px;
+  }
+  .iconContainer2 {
+    background-color: #4d2c5e;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 80px;
+    padding: 0 15px;
+  }
+  .purpleSecCard {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    color: white;
+    width: 421px;
+  }
+  .trackSec {
+    background-image: url("./img/trackBg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+  }
+  .card {
+    position: relative;
+    width: 490px;
+    height: 457px;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    background: #ffffff;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+  }
+  .orangBtn {
+    position: absolute;
+    width: 160px;
+    height: 50px;
+    left: 150px;
+    top: 453px;
+    border: 0px;
+    color: white;
+    font-size: 20px;
+    border-radius: 96px;
+    background-color: #ff7426;
+  }
+  .orangBtn:hover {
+    background: #4d2c5e;
+    cursor: pointer;
+    font-size: 21px;
+  }
+  .cardsCont {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  #empoweringSec {
+    padding: 46px 200px;
+    background-image: url("./img/bg1.png");
+    background-repeat: no-repeat;
+    height: 636px;
+    margin-top: 170px;
+    display: flex;
+    gap: 230px;
+
+    justify-content: center;
+  }
+
+
+
+  .carousel {
+      background-image: url("./img/emptyBg.png");
+      background-repeat: no-repeat;
+      height: 500px;
+text-align: center;
+padding: 100px;
+}
+
+.carousel h2 {
+font-size: 24px;
+color: #050c26;
+margin-bottom: 10px;
+}
+
+.carousel p {
+font-size: 14px;
+color: #777;
+margin-bottom: 20px;
+}
+
+.carousel-container {
+
+overflow: hidden;
+position: relative;
+width: 90%;
+margin: 0 auto;
+max-width: 1200px;
+}
+
+.carousel-track {
+display: flex;
+transition: transform 0.5s ease-in-out;
+margin-bottom: 5px;
+}
+.iconCont{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.carouselCard {
+background: white;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+padding: 20px;
+min-width: calc(100% / 3); /* Show 3 cards at a time */
+margin: 0 10px;
+text-align: left;
+
+
+}
+
+.carousel-controls {
+margin: 15px 0;
+}
+
+.carousel-controls button {
+padding: 10px 20px;
+border: none;
+background-color: #007BFF;
+color: white;
+border-radius: 4px;
+cursor: pointer;
+margin: 0 5px;
+}
+
+.carousel-controls button:disabled {
+background-color: #ccc;
+cursor: not-allowed;
+}
+
+.carousel-dots {
+margin-top: 28px;
+}
+
+.dot {
+display: inline-block;
+height: 12px;
+width: 12px;
+background-color: #ddd;
+border-radius: 50%;
+margin: 0 5px;
+cursor: pointer;
+}
+
+.dot.active {
+/* Rectangle 32 */
+
+width: 39px;
+height: 12px;
+left: 897px;
+top: 3317px;
+
+background: #4D2C5E;
+border-radius: 32px;
+
+
+}
+
+
+.footer {
+background-color: #fdf4e4;
+color: #333;
+padding: 30px 20px;
+font-size: 14px;
+}
+
+.footer-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+max-width: 1200px;
+margin: 0 auto;
+gap: 20px;
+}
+
+.footer-section {
+flex: 1 1 200px;
+}
+
+.footer-logo {
+font-size: 20px;
+font-weight: bold;
+display: flex;
+align-items: center;
+gap: 8px;
+margin-bottom: 10px;
+}
+
+.footer-section h4 {
+font-size: 16px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.footer-section p {
+color: #555;
+line-height: 1.6;
+}
+
+.footer-section ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.footer-section ul li {
+margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+text-decoration: none;
+color: #333;
+transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+color: #ff7426;
+}
+
+.footer-bottom {
+text-align: center;
+padding: 10px 0;
+border-top: 1px solid #ddd;
+font-size: 12px;
+
+color: #777;
+}
