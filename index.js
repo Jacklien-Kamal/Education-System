@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // دالة لإنشاء كارت الدورة
   function createCourseCard(course) {
-    return `  <a href="./courseDetails.html?course=${course.code}">
+    return `  <a href="./courses.html">
       <div class="card">
         <img src="./img/rec.png" />
         <span style="display: flex; align-items: center; justify-content: space-between;">
